@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace TopCinema.Models
 {
-    internal class BilheteModel
+    public class BilheteModel
     {
+        public int Lugar { get; set; }
+        public bool Estado { get; set; }
     }
 }

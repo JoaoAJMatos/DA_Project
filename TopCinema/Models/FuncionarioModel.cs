@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TopCinema.Models
 {
-    internal class FuncionarioModel
+    internal class FuncionarioModel : PessoaModel
     {
+        public float Salario { get; set; }
+        public string Funcao { get; set; }
+        public List<BilheteModel> BilheteModel { get; set; }
     }
 }

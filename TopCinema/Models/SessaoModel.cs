@@ -8,5 +8,9 @@ namespace TopCinema.Models
 {
     internal class SessaoModel
     {
+        public DateTime DataHora { get; set; }
+        public float Preco { get; set;}
+        public FilmeModel FilmeModel { get; set; }
+        public List<BilheteModel> BilheteModel { get; set; }
     }
 }

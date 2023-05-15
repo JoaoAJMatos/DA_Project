@@ -8,5 +8,12 @@ namespace TopCinema.Models
 {
     internal class CinemaModel
     {
+        public string Name { get; set; }
+        public string Morada { get; set; }
+        public string Email { get; set; }
+        public List<SalaModel> SalaModel { get; set; }
+
+
+        public CinemaModel() { }
     }
 }

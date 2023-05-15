@@ -38,15 +38,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(469, 47);
+            this.listBox1.Location = new System.Drawing.Point(469, 79);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(282, 308);
+            this.listBox1.Size = new System.Drawing.Size(289, 276);
             this.listBox1.TabIndex = 0;
             // 
             // Nome
@@ -130,11 +132,33 @@
             this.button3.Text = "Alterar";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.Transparent;
+            this.button4.Image = global::TopCinema.Properties.Resources.magnifier;
+            this.button4.Location = new System.Drawing.Point(728, 38);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(30, 30);
+            this.button4.TabIndex = 16;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(469, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(252, 27);
+            this.textBox1.TabIndex = 15;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -164,5 +188,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

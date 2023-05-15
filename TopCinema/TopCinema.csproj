@@ -50,6 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BilheteController.cs" />
+    <Compile Include="Controllers\CategoriaController.cs" />
+    <Compile Include="Controllers\CinemaController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\FilmeController.cs" />
+    <Compile Include="Controllers\FuncionarioController.cs" />
+    <Compile Include="Controllers\PessoaController.cs" />
+    <Compile Include="Controllers\SalaController.cs" />
+    <Compile Include="Controllers\SessaoController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,9 +157,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\brokie.jpg" />
   </ItemGroup>

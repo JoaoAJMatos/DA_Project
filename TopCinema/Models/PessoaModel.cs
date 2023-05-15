@@ -8,5 +8,7 @@ namespace TopCinema.Models
 {
     internal class PessoaModel
     {
+        public string Name { get; set; }
+        public string Morada { get; set; }
     }
 }
