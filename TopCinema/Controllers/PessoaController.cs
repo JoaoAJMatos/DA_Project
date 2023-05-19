@@ -10,5 +10,6 @@ namespace TopCinema.Controllers
 {
     internal class PessoaController
     {
+        private List<PessoaModel> PessoaModels;
     }
 }

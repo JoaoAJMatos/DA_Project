@@ -11,5 +11,11 @@ namespace TopCinema.Models
         public float Salario { get; set; }
         public string Funcao { get; set; }
         public List<BilheteModel> BilheteModel { get; set; }
+
+        /*public FuncionarioModel(float salario,string funcao) {
+            Salario = salario;
+            Funcao = funcao;
+            BilheteModel = new List<BilheteModel>();
+        }*/
     }
 }

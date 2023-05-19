@@ -12,5 +12,12 @@ namespace TopCinema.Models
         public float Preco { get; set;}
         public FilmeModel FilmeModel { get; set; }
         public List<BilheteModel> BilheteModel { get; set; }
+
+        public SessaoModel(float preco) {
+            Preco = preco;
+            DataHora = DateTime.Now;
+            BilheteModel = new List<BilheteModel>();
+            //FilmeModel = new FilmeModel();
+        }
     }
 }

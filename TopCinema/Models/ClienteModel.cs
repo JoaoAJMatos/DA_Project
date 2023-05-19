@@ -10,5 +10,10 @@ namespace TopCinema.Models
     {
         public int NumFiscal { get; set; }
         public List<BilheteModel> BilheteModel { get; set; }
+
+        /*public ClienteModel(int numFiscal) {
+            NumFiscal = numFiscal;
+            BilheteModel = new List<BilheteModel>();
+        }*/
     }
 }

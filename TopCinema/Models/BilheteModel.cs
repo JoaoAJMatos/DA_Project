@@ -10,5 +10,13 @@ namespace TopCinema.Models
     {
         public int Lugar { get; set; }
         public bool Estado { get; set; }
+
+        public BilheteModel(int lugar, bool estado)
+        {
+            Lugar = lugar;
+            Estado = estado;
+        }
     }
+
+    
 }

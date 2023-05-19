@@ -10,5 +10,6 @@ namespace TopCinema.Controllers
 {
     internal class ClienteController
     {
+        private List<ClienteModel> ClienteModels;
     }
 }

@@ -10,5 +10,6 @@ namespace TopCinema.Controllers
 {
     internal class SessaoController
     {
+        private List<SessaoModel> SessaoModels;
     }
 }

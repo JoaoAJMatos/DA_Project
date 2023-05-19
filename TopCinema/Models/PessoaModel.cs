@@ -10,5 +10,10 @@ namespace TopCinema.Models
     {
         public string Name { get; set; }
         public string Morada { get; set; }
+
+        /*public PessoaModel(string name,string morada) {
+            Name = name;
+            Morada = morada;
+        }*/
     }
 }

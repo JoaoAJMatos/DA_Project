@@ -10,5 +10,6 @@ namespace TopCinema.Controllers
 {
     internal class SalaController
     {
+        private List<SalaModel> SalaModels;
     }
 }

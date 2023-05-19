@@ -10,5 +10,6 @@ namespace TopCinema.Controllers
 {
     internal class FuncionarioController
     {
+        private List<FuncionarioModel> FuncionarioModels;
     }
 }

@@ -10,5 +10,6 @@ namespace TopCinema.Controllers
 {
     internal class FilmeController
     {
+        private List<FilmeModel> FilmeModels;
     }
 }
