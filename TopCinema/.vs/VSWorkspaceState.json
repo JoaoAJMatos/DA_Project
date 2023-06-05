@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
-    "\\Models"
+    "\\Models",
+    "\\Views"
   ],
-  "SelectedNode": "\\Controllers\\SessaoController.cs",
+  "SelectedNode": "\\Models\\SessaoModel.cs",
   "PreviewInSolutionExplorer": false
 }

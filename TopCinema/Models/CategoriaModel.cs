@@ -8,6 +8,7 @@ namespace TopCinema.Models
 {
     internal class CategoriaModel
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public bool Activa { get; set; }
 

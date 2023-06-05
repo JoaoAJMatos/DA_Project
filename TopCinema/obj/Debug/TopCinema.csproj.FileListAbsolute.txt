@@ -36,3 +36,7 @@ C:\Users\jmszf\OneDrive\Documentos\GitHub\DA_Project\TopCinema\obj\Debug\TopCine
 C:\Users\jmszf\OneDrive\Documentos\GitHub\DA_Project\TopCinema\obj\Debug\TopCinema.exe
 C:\Users\jmszf\OneDrive\Documentos\GitHub\DA_Project\TopCinema\obj\Debug\TopCinema.pdb
 C:\Users\jmszf\OneDrive\Documentos\GitHub\DA_Project\TopCinema\obj\Debug\TopCinema.ListSessoes.resources
+C:\Users\jmszf\OneDrive\Documentos\GitHub\DA_Project\TopCinema\bin\Debug\EntityFramework.dll
+C:\Users\jmszf\OneDrive\Documentos\GitHub\DA_Project\TopCinema\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jmszf\OneDrive\Documentos\GitHub\DA_Project\TopCinema\bin\Debug\EntityFramework.xml
+C:\Users\jmszf\OneDrive\Documentos\GitHub\DA_Project\TopCinema\bin\Debug\EntityFramework.SqlServer.xml

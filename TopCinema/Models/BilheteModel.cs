@@ -8,6 +8,7 @@ namespace TopCinema.Models
 {
     public class BilheteModel
     {
+        public int Id { get; set; }
         public int Lugar { get; set; }
         public bool Estado { get; set; }
 
@@ -15,6 +16,10 @@ namespace TopCinema.Models
         {
             Lugar = lugar;
             Estado = estado;
+        }
+
+        public void GetBilhete()
+        { 
         }
     }
 

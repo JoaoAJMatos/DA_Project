@@ -29,28 +29,30 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pbImageMovie = new System.Windows.Forms.PictureBox();
+            this.txtSala = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFilme = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dateTimePickerDataHora = new System.Windows.Forms.DateTimePicker();
+            this.txtPreco = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCriar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImageMovie)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.btnCriar);
+            this.panel1.Controls.Add(this.pbImageMovie);
+            this.panel1.Controls.Add(this.txtSala);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtFilme);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.dateTimePickerDataHora);
+            this.panel1.Controls.Add(this.txtPreco);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(36, 59);
@@ -58,21 +60,21 @@
             this.panel1.Size = new System.Drawing.Size(722, 355);
             this.panel1.TabIndex = 3;
             // 
-            // pictureBox1
+            // pbImageMovie
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(391, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(304, 301);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pbImageMovie.Location = new System.Drawing.Point(391, 25);
+            this.pbImageMovie.Name = "pbImageMovie";
+            this.pbImageMovie.Size = new System.Drawing.Size(304, 301);
+            this.pbImageMovie.TabIndex = 9;
+            this.pbImageMovie.TabStop = false;
             // 
-            // textBox3
+            // txtSala
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(111, 180);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 27);
-            this.textBox3.TabIndex = 8;
+            this.txtSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSala.Location = new System.Drawing.Point(111, 180);
+            this.txtSala.Name = "txtSala";
+            this.txtSala.Size = new System.Drawing.Size(186, 27);
+            this.txtSala.TabIndex = 8;
             // 
             // label4
             // 
@@ -84,13 +86,13 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Sala";
             // 
-            // textBox1
+            // txtFilme
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(111, 126);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 27);
-            this.textBox1.TabIndex = 6;
+            this.txtFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFilme.Location = new System.Drawing.Point(111, 126);
+            this.txtFilme.Name = "txtFilme";
+            this.txtFilme.Size = new System.Drawing.Size(186, 27);
+            this.txtFilme.TabIndex = 6;
             // 
             // label3
             // 
@@ -102,22 +104,22 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Filme";
             // 
-            // dateTimePicker1
+            // dateTimePickerDataHora
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(111, 23);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(229, 27);
-            this.dateTimePicker1.TabIndex = 4;
-            this.dateTimePicker1.Value = new System.DateTime(2023, 5, 9, 0, 0, 0, 0);
+            this.dateTimePickerDataHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerDataHora.Location = new System.Drawing.Point(111, 23);
+            this.dateTimePickerDataHora.Name = "dateTimePickerDataHora";
+            this.dateTimePickerDataHora.Size = new System.Drawing.Size(229, 27);
+            this.dateTimePickerDataHora.TabIndex = 4;
+            this.dateTimePickerDataHora.Value = new System.DateTime(2023, 5, 9, 0, 0, 0, 0);
             // 
-            // textBox2
+            // txtPreco
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(111, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 27);
-            this.textBox2.TabIndex = 3;
+            this.txtPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.Location = new System.Drawing.Point(111, 68);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(186, 27);
+            this.txtPreco.TabIndex = 3;
             // 
             // label2
             // 
@@ -139,6 +141,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "DataHora";
             // 
+            // btnCriar
+            // 
+            this.btnCriar.Location = new System.Drawing.Point(27, 285);
+            this.btnCriar.Name = "btnCriar";
+            this.btnCriar.Size = new System.Drawing.Size(129, 41);
+            this.btnCriar.TabIndex = 10;
+            this.btnCriar.Text = "Criar Sessão";
+            this.btnCriar.UseVisualStyleBackColor = true;
+            // 
             // FormSessoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -149,7 +160,7 @@
             this.Text = "FormSessoes";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImageMovie)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,14 +168,15 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.PictureBox pbImageMovie;
+        private System.Windows.Forms.TextBox txtSala;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFilme;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDataHora;
+        private System.Windows.Forms.Button btnCriar;
     }
 }

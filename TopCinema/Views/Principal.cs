@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using TopCinema.Views;
 
 namespace TopCinema
 {
@@ -25,10 +25,7 @@ namespace TopCinema
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new Views.Atendimento().Show();
-        }
+        
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -57,6 +54,31 @@ namespace TopCinema
         private void Form1_Load(object sender, EventArgs e)
         {
             ShowSessions();
+        }
+
+        private void btnFilmes_Click(object sender, EventArgs e)
+        {
+            new Filmes().Show();
+        }
+
+        private void btnCinema_Click(object sender, EventArgs e)
+        {
+            new Cinema().Show();
+        }
+
+        private void btnSessoes_Click(object sender, EventArgs e)
+        {
+            new FormSessoes().Show();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            new Clientes().Show(); 
+        }
+
+        private void btnAtendimento_Click(object sender, EventArgs e)
+        {
+            new Atendimento().Show();
         }
     }
 }

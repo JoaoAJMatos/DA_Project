@@ -8,6 +8,7 @@ namespace TopCinema.Models
 {
     internal class SessaoModel
     {
+        public int Id { get; set; }
         public DateTime DataHora { get; set; }
         public float Preco { get; set;}
         public FilmeModel FilmeModel { get; set; }
@@ -17,7 +18,7 @@ namespace TopCinema.Models
             Preco = preco;
             DataHora = DateTime.Now;
             BilheteModel = new List<BilheteModel>();
-            //FilmeModel = new FilmeModel();
+            FilmeModel = new FilmeModel("",false);
         }
     }
 }

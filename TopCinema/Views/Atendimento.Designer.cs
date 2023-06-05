@@ -38,8 +38,8 @@
             this.Morada = new System.Windows.Forms.Label();
             this.Nome = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -63,9 +63,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::TopCinema.Properties.Resources.magnifier;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::TopCinema.Properties.Resources.magnifier;
             this.button1.Location = new System.Drawing.Point(304, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 30);
@@ -144,6 +145,13 @@
             this.panel2.Size = new System.Drawing.Size(282, 300);
             this.panel2.TabIndex = 1;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 86);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 198);
+            this.flowLayoutPanel1.TabIndex = 1;
+            // 
             // textBox2
             // 
             this.textBox2.AcceptsReturn = true;
@@ -158,13 +166,6 @@
             this.textBox2.TabIndex = 0;
             this.textBox2.Text = "Tela";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(16, 86);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 198);
-            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // Atendimento
             // 

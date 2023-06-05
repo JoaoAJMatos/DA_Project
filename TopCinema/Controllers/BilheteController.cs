@@ -8,8 +8,15 @@ using TopCinema.Models;
 
 namespace TopCinema.Controllers
 {
-    internal class BilheteController
+    internal class BilheteController : CinemaContext
     {
-        private List<BilheteModel> BilheteModels;
+        
+        public static List<BilheteModel> GetBilhete() {
+            using (var db = new CinemaContext())
+            {
+                return db.Bilhetes.ToList();
+            }
+        }
+
     }
 }

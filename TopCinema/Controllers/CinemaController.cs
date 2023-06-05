@@ -10,6 +10,6 @@ namespace TopCinema.Controllers
 {
     internal class CinemaController
     {
-        private List<CinemaModel> CinemaModels;
+       
     }
 }

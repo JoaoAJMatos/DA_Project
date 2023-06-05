@@ -11,9 +11,21 @@ namespace TopCinema.Models
         public int NumFiscal { get; set; }
         public List<BilheteModel> BilheteModel { get; set; }
 
-        /*public ClienteModel(int numFiscal) {
+        public ClienteModel(string name,string morada,int numFiscal) : base(name, morada)
+        {
             NumFiscal = numFiscal;
             BilheteModel = new List<BilheteModel>();
-        }*/
+        }
+        public ClienteModel() : base("","")
+        {
+            
+        }
+
+        public override string ToString()
+        {
+            string original = base.ToString();
+            original += NumFiscal + "\n";
+            return original;
+        }
     }
 }

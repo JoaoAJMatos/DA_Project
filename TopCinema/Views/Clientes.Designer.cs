@@ -28,28 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbClientes = new System.Windows.Forms.ListBox();
             this.Nome = new System.Windows.Forms.Label();
             this.Morada = new System.Windows.Forms.Label();
             this.NIF = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtMorada = new System.Windows.Forms.TextBox();
             this.txtNIF = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lbClientes
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(469, 79);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(289, 276);
-            this.listBox1.TabIndex = 0;
+            this.lbClientes.FormattingEnabled = true;
+            this.lbClientes.ItemHeight = 16;
+            this.lbClientes.Location = new System.Drawing.Point(462, 44);
+            this.lbClientes.Name = "lbClientes";
+            this.lbClientes.Size = new System.Drawing.Size(289, 212);
+            this.lbClientes.TabIndex = 0;
+            this.lbClientes.SelectedIndexChanged += new System.EventHandler(this.lbClientes_SelectedIndexChanged);
             // 
             // Nome
             // 
@@ -60,6 +59,7 @@
             this.Nome.Size = new System.Drawing.Size(53, 20);
             this.Nome.TabIndex = 1;
             this.Nome.Text = "Nome";
+            this.Nome.Click += new System.EventHandler(this.Nome_Click);
             // 
             // Morada
             // 
@@ -70,6 +70,7 @@
             this.Morada.Size = new System.Drawing.Size(65, 20);
             this.Morada.TabIndex = 2;
             this.Morada.Text = "Morada";
+            this.Morada.Click += new System.EventHandler(this.Morada_Click);
             // 
             // NIF
             // 
@@ -80,6 +81,7 @@
             this.NIF.Size = new System.Drawing.Size(35, 20);
             this.NIF.TabIndex = 3;
             this.NIF.Text = "NIF";
+            this.NIF.Click += new System.EventHandler(this.NIF_Click);
             // 
             // txtNome
             // 
@@ -88,6 +90,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(298, 27);
             this.txtNome.TabIndex = 4;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // txtMorada
             // 
@@ -96,6 +99,7 @@
             this.txtMorada.Name = "txtMorada";
             this.txtMorada.Size = new System.Drawing.Size(298, 27);
             this.txtMorada.TabIndex = 5;
+            this.txtMorada.TextChanged += new System.EventHandler(this.txtMorada_TextChanged);
             // 
             // txtNIF
             // 
@@ -104,73 +108,56 @@
             this.txtNIF.Name = "txtNIF";
             this.txtNIF.Size = new System.Drawing.Size(298, 27);
             this.txtNIF.TabIndex = 6;
+            this.txtNIF.TextChanged += new System.EventHandler(this.txtNIF_TextChanged);
             // 
-            // button1
+            // btnRegistrar
             // 
-            this.button1.Location = new System.Drawing.Point(43, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 59);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Location = new System.Drawing.Point(43, 211);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(110, 59);
+            this.btnRegistrar.TabIndex = 7;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // button2
+            // btnApagar
             // 
-            this.button2.Location = new System.Drawing.Point(171, 246);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 59);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Apagar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnApagar.Location = new System.Drawing.Point(171, 211);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(110, 59);
+            this.btnApagar.TabIndex = 8;
+            this.btnApagar.Text = "Apagar";
+            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
-            // button3
+            // btnAlterar
             // 
-            this.button3.Location = new System.Drawing.Point(298, 246);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 59);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Alterar";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Image = global::TopCinema.Properties.Resources.magnifier;
-            this.button4.Location = new System.Drawing.Point(728, 38);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 30);
-            this.button4.TabIndex = 16;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(469, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 27);
-            this.textBox1.TabIndex = 15;
+            this.btnAlterar.Location = new System.Drawing.Point(298, 211);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(110, 59);
+            this.btnAlterar.TabIndex = 9;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(781, 324);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btnApagar);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtNIF);
             this.Controls.Add(this.txtMorada);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.NIF);
             this.Controls.Add(this.Morada);
             this.Controls.Add(this.Nome);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbClientes);
             this.Name = "Clientes";
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.Clientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,17 +165,15 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbClientes;
         private System.Windows.Forms.Label Nome;
         private System.Windows.Forms.Label Morada;
         private System.Windows.Forms.Label NIF;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtMorada;
         private System.Windows.Forms.TextBox txtNIF;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.Button btnAlterar;
     }
 }
