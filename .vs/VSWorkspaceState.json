@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\TopCinema"
+    "\\Controllers",
+    "\\Models",
+    "\\Views"
   ],
+  "SelectedNode": "\\Models\\SessaoModel.cs",
   "PreviewInSolutionExplorer": false
 }
