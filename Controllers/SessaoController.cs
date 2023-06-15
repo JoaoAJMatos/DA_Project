@@ -168,5 +168,19 @@ namespace TopCinema.Controllers
                 }
             }
         }
+
+        static public float GetTotalArrecadado()
+        {
+            using (var db = new CinemaContext())
+            {
+                var sessoes = db.Sessoes.Include("ListaBilhetes").ToList();
+                var total = 0.0f;
+                foreach (var s in sessoes)
+                {
+                    total += s.ListaBilhetes.Count * s.Preco;
+                }
+                return total;
+            }
+        }
     }
 }
