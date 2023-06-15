@@ -12,15 +12,16 @@ namespace TopCinema.Models
         public string Name { get; set; }
         public string Morada { get; set; }
         public string Email { get; set; }
-        public List<SalaModel> SalaModel { get; set; }
+        public List<SalaModel> ListaSalas { get; set; }
 
+        public CinemaModel() { }
 
-        public CinemaModel(string name,string morada,string email) {
+        public CinemaModel(string name, string morada, string email) 
+        {
             Name = name;
             Morada = morada;
             Email = email;
-            SalaModel = new List<SalaModel>();
-            
+            ListaSalas = new List<SalaModel>();    
         }
     }
 }

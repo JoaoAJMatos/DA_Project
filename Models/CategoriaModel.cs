@@ -9,13 +9,15 @@ namespace TopCinema.Models
     internal class CategoriaModel
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public bool Activa { get; set; }
+        public string Nome { get; set; }
+        public bool Ativa { get; set; }
 
-        public CategoriaModel(string name,bool activa) {
-            Name = name;
-            Activa = activa;
-        
-        } 
+        public CategoriaModel() { }
+
+        public CategoriaModel(string nome, bool ativa) 
+        {
+            Nome = nome;
+            Ativa = ativa;
+        }
     }
 }

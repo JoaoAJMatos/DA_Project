@@ -9,19 +9,19 @@ namespace TopCinema.Models
     public class BilheteModel
     {
         public int Id { get; set; }
-        public int Lugar { get; set; }
-        public bool Estado { get; set; }
+        public int Fila { get; set; }
+        public int Coluna { get; set; }
+        public string LugarStr { get; set; }
+        public bool Usado { get; set; }
 
-        public BilheteModel(int lugar, bool estado)
+        public BilheteModel() { }
+
+        public BilheteModel(int fila, int coluna)
         {
-            Lugar = lugar;
-            Estado = estado;
-        }
-
-        public void GetBilhete()
-        { 
+            Fila = fila;
+            Coluna = coluna;
+            LugarStr = fila + "-" + coluna;
+            Usado = false;
         }
     }
-
-    
 }

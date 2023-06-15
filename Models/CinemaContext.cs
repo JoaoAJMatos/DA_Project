@@ -17,7 +17,12 @@ namespace TopCinema.Models
         public DbSet<FuncionarioModel> Funcionarios { get;set;}
         public DbSet<PessoaModel> Pessoas { get;set;}
         public DbSet<SalaModel> Salas { get;set; }
-        public DbSet<SessaoModel> Sessaos { get;set;}
+        public DbSet<SessaoModel> Sessoes { get;set;}
         public DbSet<ClienteModel> Clientes { get; set; }
+
+        public CinemaContext() : base("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TopCinemaDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
+        {
+            Database.SetInitializer<CinemaContext>(new CreateDatabaseIfNotExists<CinemaContext>());
+        }
     }
 }

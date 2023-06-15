@@ -8,26 +8,17 @@ namespace TopCinema.Models
 {
     internal class FuncionarioModel : PessoaModel
     {
-        
         public float Salario { get; set; }
         public string Funcao { get; set; }
-        public List<BilheteModel> BilheteModel { get; set; }
+        public List<BilheteModel> BilhetesEmitidos { get; set; }
 
-        public FuncionarioModel(string name,string morada,float salario,string funcao) : base(name, morada)
+        public FuncionarioModel() : base() { }
+
+        public FuncionarioModel(string nome, string morada, float salario, string funcao) : base(nome, morada)
         {
             Salario = salario;
             Funcao = funcao;
-            BilheteModel = new List<BilheteModel>();
-        }
-        public FuncionarioModel() : base("", "")
-        {
-
-        }
-        public override string ToString()
-        {
-            string original = base.ToString();
-            original += Salario + "\n" + Funcao + "\n";
-            return original;
+            BilhetesEmitidos = new List<BilheteModel>();
         }
     }
 }

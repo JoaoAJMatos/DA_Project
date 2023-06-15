@@ -17,39 +17,62 @@ namespace TopCinema.Views
         public Cinema()
         {
             InitializeComponent();
+        }
+
+        private void Cinema_Load(object sender, EventArgs e)
+        {
             var Salas = SalaController.GetSalas();
             lbSalas.DataSource = Salas;
+            lbSalas.DisplayMember = "Nome";
+
+            try
+            {
+                var cinema = CinemaController.GetCinema();
+                txtNome.Text = cinema.Name;
+                txtMorada.Text = cinema.Morada;
+                txtEmail.Text = cinema.Email;
+            }
+            catch
+            { 
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            bool nome = txtNome.Enabled;
-            bool email = txtEmail.Enabled;
-            bool morada = txtMorada.Enabled;
+            string nome = txtNome.Text;
+            string email = txtEmail.Text;
+            string morada = txtMorada.Text;
 
-            if (nome && email && morada)
+            if (nome == "" || email == "" || morada == "")
             {
-                txtNome.Enabled = false;
-                txtEmail.Enabled = false;
-                txtMorada.Enabled = false;
+                MessageBox.Show("Todos os campos são obrigatórios.");
+                return;
+            }
+
+            if (!CinemaController.CinemaExists())
+            {
+                CinemaController.AddCinema(nome, morada, email);
             }
             else
             {
-                txtNome.Enabled = true;
-                txtEmail.Enabled = true;
-                txtMorada.Enabled = true;
+                CinemaController.EditCinema(nome, morada, email);
             }
+
+            var cinema = CinemaController.GetCinema();
+            txtNome.Text = cinema.Name;
+            txtMorada.Text = cinema.Morada;
+            txtEmail.Text = cinema.Email;
         }
 
         private void lbSalas_SelectedIndexChanged(object sender, EventArgs e)
         {
             SalaModel sala = (SalaModel)lbSalas.SelectedItem;
-            txtNomeSala.Text = sala.Name;
+            txtNomeSala.Text = sala.Nome;
             numericUpDownColunas.Value = sala.Colunas;
             numericUpDownFilas.Value = sala.Filas;
-            //SalaController.GetSala();
 
-
+            btnApagar.Enabled = true;
+            btnSalvar.Enabled = true;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -58,12 +81,31 @@ namespace TopCinema.Views
             int colunas = (int)numericUpDownColunas.Value;
             int filas = (int)numericUpDownFilas.Value;
 
-            SalaController.AddSala(nomesala, colunas, filas);
-            mostrarSala();
-            
+            if (nomesala == "")
+            {
+                MessageBox.Show("A sala precisa de ter um nome.");
+                return;
+            }
+
+            if (colunas == 0 || filas == 0)
+            {
+                MessageBox.Show("Tamanho da sala invalido.");
+                return;
+            }
+
+            try
+            {
+                SalaController.AddSala(nomesala, colunas, filas);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            UpdateSalas();
         }
 
-        private void mostrarSala()
+        private void UpdateSalas()
         {
             var Salas = SalaController.GetSalas();
             lbSalas.DataSource = Salas;
@@ -73,8 +115,8 @@ namespace TopCinema.Views
         {
             SalaModel sala = (SalaModel)lbSalas.SelectedItem;
 
-            SalaController.DeleteSala(sala);
-            mostrarSala();
+            SalaController.DeleteSala(sala.Id);
+            UpdateSalas();
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -83,8 +125,8 @@ namespace TopCinema.Views
             string nomesala = txtNomeSala.Text;
             int colunas = (int)numericUpDownColunas.Value;
             int filas = (int)numericUpDownFilas.Value;
-            SalaController.AlterarSala(sala,nomesala,colunas,filas);
-            mostrarSala();
+            SalaController.AlterarSala(sala.Id, nomesala, colunas, filas);
+            UpdateSalas();
         }
     }
 }

@@ -9,21 +9,19 @@ namespace TopCinema.Models
     internal class FilmeModel
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public DateTime Duracao { get; set; }
-        public bool Activo { get; set; }
-        public CategoriaModel CategoriaModel { get; set; }
+        public string Nome { get; set; }
+        public int Duracao { get; set; }
+        public bool Ativo { get; set; }
+        public CategoriaModel Categoria { get; set; }
 
-        public FilmeModel(string name,bool activo) {
-            Name = name;
-            Activo = activo;
-            Duracao = DateTime.Now;
-            CategoriaModel = new CategoriaModel(name,activo);
-        }
+        public FilmeModel() { }
 
-        public virtual string GetFilme()
+        public FilmeModel(string nome, int duracao, CategoriaModel categoria) 
         {
-            return this.Name + "\n" + this.Duracao + "\n" + this.Activo + "\n";
+            Nome = nome;
+            Ativo = false;
+            Duracao = duracao;
+            Categoria = categoria;
         }
     }
 }

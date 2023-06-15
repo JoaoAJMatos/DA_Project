@@ -69,7 +69,36 @@
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\SalaController.cs" />
     <Compile Include="Controllers\SessaoController.cs" />
+    <Compile Include="Migrations\202306081348358_TopCinemaDB.cs" />
+    <Compile Include="Migrations\202306081348358_TopCinemaDB.designer.cs">
+      <DependentUpon>202306081348358_TopCinemaDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202306081606006_TopCinemaDB1.cs" />
+    <Compile Include="Migrations\202306081606006_TopCinemaDB1.designer.cs">
+      <DependentUpon>202306081606006_TopCinemaDB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202306101531078_topcinema.cs" />
+    <Compile Include="Migrations\202306101531078_topcinema.designer.cs">
+      <DependentUpon>202306101531078_topcinema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202306111729316_topcinemadb2.cs" />
+    <Compile Include="Migrations\202306111729316_topcinemadb2.designer.cs">
+      <DependentUpon>202306111729316_topcinemadb2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CinemaContext.cs" />
+    <Compile Include="Views\Bilhetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Bilhetes.Designer.cs">
+      <DependentUpon>Bilhetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Funcionarios.Designer.cs">
+      <DependentUpon>Funcionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,12 +147,30 @@
     <Compile Include="Views\FormSessoes.Designer.cs">
       <DependentUpon>FormSessoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ListSessoes.cs">
+    <Compile Include="Views\CardSessao.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ListSessoes.Designer.cs">
-      <DependentUpon>ListSessoes.cs</DependentUpon>
+    <Compile Include="Views\CardSessao.Designer.cs">
+      <DependentUpon>CardSessao.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Migrations\202306081348358_TopCinemaDB.resx">
+      <DependentUpon>202306081348358_TopCinemaDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306081606006_TopCinemaDB1.resx">
+      <DependentUpon>202306081606006_TopCinemaDB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306101531078_topcinema.resx">
+      <DependentUpon>202306101531078_topcinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306111729316_topcinemadb2.resx">
+      <DependentUpon>202306111729316_topcinemadb2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Bilhetes.resx">
+      <DependentUpon>Bilhetes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Funcionarios.resx">
+      <DependentUpon>Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,8 +199,8 @@
     <EmbeddedResource Include="Views\FormSessoes.resx">
       <DependentUpon>FormSessoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ListSessoes.resx">
-      <DependentUpon>ListSessoes.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CardSessao.resx">
+      <DependentUpon>CardSessao.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -39,7 +39,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.numericUpDownFilas = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownColunas = new System.Windows.Forms.NumericUpDown();
-            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.btnApagar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.lbSalas = new System.Windows.Forms.ListBox();
@@ -47,6 +47,7 @@
             this.NIF = new System.Windows.Forms.Label();
             this.Morada = new System.Windows.Forms.Label();
             this.Nome = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFilas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColunas)).BeginInit();
@@ -56,87 +57,91 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 196);
+            this.label4.Location = new System.Drawing.Point(36, 160);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 20);
+            this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 13;
             this.label4.Text = "Email:";
             // 
             // txtEmail
             // 
-            this.txtEmail.Enabled = false;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(115, 193);
+            this.txtEmail.Location = new System.Drawing.Point(86, 157);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(263, 27);
+            this.txtEmail.Size = new System.Drawing.Size(198, 23);
             this.txtEmail.TabIndex = 12;
-            this.txtEmail.Text = "topcinema@therealworld.com";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 146);
+            this.label3.Location = new System.Drawing.Point(22, 119);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 11;
             this.label3.Text = "Morada:";
             // 
             // txtMorada
             // 
-            this.txtMorada.Enabled = false;
             this.txtMorada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMorada.Location = new System.Drawing.Point(115, 143);
+            this.txtMorada.Location = new System.Drawing.Point(86, 116);
+            this.txtMorada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMorada.Name = "txtMorada";
-            this.txtMorada.Size = new System.Drawing.Size(263, 27);
+            this.txtMorada.Size = new System.Drawing.Size(198, 23);
             this.txtMorada.TabIndex = 10;
-            this.txtMorada.Text = "Arroz com Queijo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 90);
+            this.label2.Location = new System.Drawing.Point(33, 74);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 20);
+            this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Nome:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 18);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 25);
+            this.label1.Size = new System.Drawing.Size(222, 24);
             this.label1.TabIndex = 8;
             this.label1.Text = "Defenições do Cinema";
             // 
             // txtNome
             // 
-            this.txtNome.Enabled = false;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(115, 87);
+            this.txtNome.Location = new System.Drawing.Point(86, 71);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(263, 27);
+            this.txtNome.Size = new System.Drawing.Size(198, 23);
             this.txtNome.TabIndex = 7;
-            this.txtNome.Text = "TopCinema";
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(285, 245);
+            this.btnEdit.Location = new System.Drawing.Point(214, 199);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(93, 33);
+            this.btnEdit.Size = new System.Drawing.Size(70, 27);
             this.btnEdit.TabIndex = 14;
-            this.btnEdit.Text = "Edit";
+            this.btnEdit.Text = "Salvar";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.numericUpDownFilas);
             this.panel1.Controls.Add(this.numericUpDownColunas);
-            this.panel1.Controls.Add(this.btnAlterar);
+            this.panel1.Controls.Add(this.btnSalvar);
             this.panel1.Controls.Add(this.btnApagar);
             this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.lbSalas);
@@ -144,42 +149,49 @@
             this.panel1.Controls.Add(this.NIF);
             this.panel1.Controls.Add(this.Morada);
             this.panel1.Controls.Add(this.Nome);
-            this.panel1.Location = new System.Drawing.Point(424, 87);
+            this.panel1.Location = new System.Drawing.Point(319, 50);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(514, 503);
+            this.panel1.Size = new System.Drawing.Size(386, 396);
             this.panel1.TabIndex = 15;
             // 
             // numericUpDownFilas
             // 
             this.numericUpDownFilas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownFilas.Location = new System.Drawing.Point(141, 355);
+            this.numericUpDownFilas.Location = new System.Drawing.Point(106, 288);
+            this.numericUpDownFilas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDownFilas.Name = "numericUpDownFilas";
-            this.numericUpDownFilas.Size = new System.Drawing.Size(120, 27);
+            this.numericUpDownFilas.Size = new System.Drawing.Size(90, 23);
             this.numericUpDownFilas.TabIndex = 24;
             // 
             // numericUpDownColunas
             // 
             this.numericUpDownColunas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownColunas.Location = new System.Drawing.Point(141, 313);
+            this.numericUpDownColunas.Location = new System.Drawing.Point(106, 254);
+            this.numericUpDownColunas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDownColunas.Name = "numericUpDownColunas";
-            this.numericUpDownColunas.Size = new System.Drawing.Size(120, 27);
+            this.numericUpDownColunas.Size = new System.Drawing.Size(90, 23);
             this.numericUpDownColunas.TabIndex = 23;
             // 
-            // btnAlterar
+            // btnSalvar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(333, 413);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(110, 59);
-            this.btnAlterar.TabIndex = 22;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            this.btnSalvar.Enabled = false;
+            this.btnSalvar.Location = new System.Drawing.Point(250, 336);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(82, 48);
+            this.btnSalvar.TabIndex = 22;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnApagar
             // 
-            this.btnApagar.Location = new System.Drawing.Point(206, 413);
+            this.btnApagar.Enabled = false;
+            this.btnApagar.Location = new System.Drawing.Point(154, 336);
+            this.btnApagar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(110, 59);
+            this.btnApagar.Size = new System.Drawing.Size(82, 48);
             this.btnApagar.TabIndex = 21;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
@@ -187,39 +199,42 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(78, 413);
+            this.btnRegistrar.Location = new System.Drawing.Point(58, 336);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(110, 59);
+            this.btnRegistrar.Size = new System.Drawing.Size(82, 48);
             this.btnRegistrar.TabIndex = 20;
-            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.Text = "Criar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // lbSalas
             // 
             this.lbSalas.FormattingEnabled = true;
-            this.lbSalas.ItemHeight = 16;
-            this.lbSalas.Location = new System.Drawing.Point(110, 16);
+            this.lbSalas.Location = new System.Drawing.Point(48, 14);
+            this.lbSalas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbSalas.Name = "lbSalas";
-            this.lbSalas.Size = new System.Drawing.Size(319, 228);
+            this.lbSalas.Size = new System.Drawing.Size(284, 186);
             this.lbSalas.TabIndex = 17;
             this.lbSalas.SelectedIndexChanged += new System.EventHandler(this.lbSalas_SelectedIndexChanged);
             // 
             // txtNomeSala
             // 
             this.txtNomeSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeSala.Location = new System.Drawing.Point(141, 262);
+            this.txtNomeSala.Location = new System.Drawing.Point(106, 213);
+            this.txtNomeSala.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNomeSala.Name = "txtNomeSala";
-            this.txtNomeSala.Size = new System.Drawing.Size(288, 27);
+            this.txtNomeSala.Size = new System.Drawing.Size(217, 23);
             this.txtNomeSala.TabIndex = 10;
             // 
             // NIF
             // 
             this.NIF.AutoSize = true;
             this.NIF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NIF.Location = new System.Drawing.Point(60, 362);
+            this.NIF.Location = new System.Drawing.Point(45, 294);
+            this.NIF.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.NIF.Name = "NIF";
-            this.NIF.Size = new System.Drawing.Size(50, 20);
+            this.NIF.Size = new System.Drawing.Size(41, 17);
             this.NIF.TabIndex = 9;
             this.NIF.Text = "Filas:";
             // 
@@ -227,9 +242,10 @@
             // 
             this.Morada.AutoSize = true;
             this.Morada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Morada.Location = new System.Drawing.Point(60, 315);
+            this.Morada.Location = new System.Drawing.Point(45, 256);
+            this.Morada.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Morada.Name = "Morada";
-            this.Morada.Size = new System.Drawing.Size(75, 20);
+            this.Morada.Size = new System.Drawing.Size(63, 17);
             this.Morada.TabIndex = 8;
             this.Morada.Text = "Colunas:";
             // 
@@ -237,17 +253,30 @@
             // 
             this.Nome.AutoSize = true;
             this.Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nome.Location = new System.Drawing.Point(60, 265);
+            this.Nome.Location = new System.Drawing.Point(45, 215);
+            this.Nome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Nome.Name = "Nome";
-            this.Nome.Size = new System.Drawing.Size(58, 20);
+            this.Nome.Size = new System.Drawing.Size(49, 17);
             this.Nome.TabIndex = 7;
             this.Nome.Text = "Nome:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(315, 15);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(161, 24);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Gestão de Salas";
+            // 
             // Cinema
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 640);
+            this.ClientSize = new System.Drawing.Size(728, 474);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.label4);
@@ -257,8 +286,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNome);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Cinema";
             this.Text = "Cinema";
+            this.Load += new System.EventHandler(this.Cinema_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFilas)).EndInit();
@@ -284,10 +315,11 @@
         private System.Windows.Forms.Label Morada;
         private System.Windows.Forms.Label Nome;
         private System.Windows.Forms.ListBox lbSalas;
-        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.NumericUpDown numericUpDownFilas;
         private System.Windows.Forms.NumericUpDown numericUpDownColunas;
+        private System.Windows.Forms.Label label5;
     }
 }

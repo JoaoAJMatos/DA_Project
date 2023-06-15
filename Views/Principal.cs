@@ -7,53 +7,81 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TopCinema.Models;
+using TopCinema.Controllers;
 using TopCinema.Views;
 
 namespace TopCinema
 {
-    public partial class Form1 : Form
+    public partial class FormPrincipal : Form
     {
-        public Form1()
+        static int TOLERANCIA = 15; // 15 minutos de tolerancia
+
+        private Timer _timer;
+        private string _funcionario;
+
+        public FormPrincipal()
         {
             InitializeComponent();
-
-           
+            _timer = new Timer();
+            _timer.Interval = 1000;
+            _timer.Tick += UpdateLabelTime;
+            _timer.Start();
         }
-        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (!CinemaController.CinemaExists())
+            {
+                MessageBox.Show("Nenhum cinema encontrado.", "Por favor configure o cinema.");
+                Cinema formCinema = new Cinema();
+                formCinema.Show();
+            }
+            else
+            {
+                PreencherInformacoes();
+            }
+        }
+
+        private void UpdateLabelTime(object sender, EventArgs e)
+        {
+            labelTime.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
 
         }
-
-        
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
             
         }
 
-        public void ShowSessions()
+        public void MostrarSessoes()
         {
-            ListSessoes[] listSessoes = new ListSessoes[10];
-            
-            for (int i = 0; i < listSessoes.Length; i++)
-            {
-                listSessoes[i] = new ListSessoes();
+            var sessoes = SessaoController.GetSessoes();
+            flowLayoutPanel1.Controls.Clear();
 
-                if (flowLayoutPanel1.Controls.Count < 0)
+            foreach (var sessao in sessoes)
+            {
+                if (sessao.HoraInicio.AddMinutes(TOLERANCIA) < DateTime.Now) continue;
+
+                if (sessao.Filme.Ativo)
                 {
-                    flowLayoutPanel1.Controls.Clear();
-                }
-                else
-                {
-                    flowLayoutPanel1.Controls.Add(listSessoes[i]);
+                    CardSessao cardSessao = new CardSessao();
+                    cardSessao.Nome = sessao.Filme.Nome;
+                    cardSessao.Horario = sessao.HoraInicio.ToString();
+                    cardSessao.Sala = sessao.Sala.Nome;
+
+                    cardSessao.Click += (s, e) =>
+                    {
+                        new Atendimento(sessao, _funcionario).Show();
+                    };
+
+                    flowLayoutPanel1.Controls.Add(cardSessao);
                 }
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            ShowSessions();
         }
 
         private void btnFilmes_Click(object sender, EventArgs e)
@@ -78,7 +106,29 @@ namespace TopCinema
 
         private void btnAtendimento_Click(object sender, EventArgs e)
         {
-            new Atendimento().Show();
+            new Funcionarios().Show();
+        }
+
+        private void buttonAtualizar_Click(object sender, EventArgs e)
+        {
+            PreencherInformacoes();
+        }
+
+        private void PreencherInformacoes()
+        {
+            var cinema = CinemaController.GetCinema();
+            labelName.Text = "Cinema: " + cinema.Name;
+
+            var funcionarios = FuncionarioController.GetFuncionarios();
+            comboBoxFuncionario.DataSource = funcionarios;
+            comboBoxFuncionario.DisplayMember = "Nome";
+
+            MostrarSessoes();
+        }
+
+        private void comboBoxFuncionario_SelectedValueChanged(object sender, EventArgs e)
+        {
+            _funcionario = comboBoxFuncionario.Text;
         }
     }
 }

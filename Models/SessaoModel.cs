@@ -9,16 +9,21 @@ namespace TopCinema.Models
     internal class SessaoModel
     {
         public int Id { get; set; }
-        public DateTime DataHora { get; set; }
+        public DateTime HoraInicio { get; set; }
         public float Preco { get; set;}
-        public FilmeModel FilmeModel { get; set; }
-        public List<BilheteModel> BilheteModel { get; set; }
+        public SalaModel Sala { get; set; }
+        public FilmeModel Filme { get; set; }
+        public List<BilheteModel> ListaBilhetes { get; set; }
 
-        public SessaoModel(float preco) {
+        public SessaoModel() { }
+
+        public SessaoModel(DateTime horaInicio, float preco, SalaModel sala, FilmeModel filme)
+        {
+            HoraInicio = horaInicio;
             Preco = preco;
-            DataHora = DateTime.Now;
-            BilheteModel = new List<BilheteModel>();
-            FilmeModel = new FilmeModel("",false);
+            Sala = sala;
+            Filme = filme;
+            ListaBilhetes = new List<BilheteModel>();
         }
     }
 }

@@ -9,22 +9,15 @@ namespace TopCinema.Models
     internal class PessoaModel
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Nome { get; set; }
         public string Morada { get; set; }
 
-        public PessoaModel(string name,string morada) {
-            Name = name;
+        public PessoaModel() { }
+
+        public PessoaModel(string nome, string morada) 
+        {
+            Nome = nome;
             Morada = morada;
-        }
-
-        public PessoaModel()
-        {
-            
-        }
-
-        public override string ToString()
-        {
-            return this.Name + "\n" + this.Morada + "\n";
         }
     }
 }
