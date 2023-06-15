@@ -39,11 +39,13 @@
             this.labelName = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
             this.buttonAtualizar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnCinema);
             this.panel1.Controls.Add(this.btnFuncionarios);
             this.panel1.Controls.Add(this.btnClientes);
@@ -52,7 +54,7 @@
             this.panel1.Location = new System.Drawing.Point(5, 64);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(131, 264);
+            this.panel1.Size = new System.Drawing.Size(131, 308);
             this.panel1.TabIndex = 2;
             // 
             // btnCinema
@@ -117,7 +119,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(140, 39);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(583, 284);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(583, 333);
             this.flowLayoutPanel1.TabIndex = 3;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -161,13 +163,24 @@
             this.buttonAtualizar.UseVisualStyleBackColor = true;
             this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 260);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 48);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Estatisticas";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(732, 333);
+            this.ClientSize = new System.Drawing.Size(732, 378);
             this.Controls.Add(this.buttonAtualizar);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.labelName);
@@ -198,6 +211,7 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Button buttonAtualizar;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -31,5 +31,13 @@ namespace TopCinema.Controllers
                 db.SaveChanges();
             }
         }
+
+        public static int GetNumeroBilhetesTotal()
+        {
+            using (var db = new CinemaContext())
+            {
+                return db.Bilhetes.Count();
+            }
+        }
     }
 }
